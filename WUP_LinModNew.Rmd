@@ -35,8 +35,8 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ### scatterplot
 ```{r}
-scatterplot1 <- ggplot(data,aes(y=SIMS, x=ARM))
-scatterplot1 + geom_point() + geom_lm()
+scatterplot.1 <- ggplot(data,aes(y=SIMS, x=ARM))
+scatterplot.1 + geom_point() + geom_lm()
 
 ```
 Looking at this scatterplot, it is clear that SIMS positively correlates with ARM.
@@ -51,11 +51,25 @@ This numerically confirms that SIMS positively correlates with ARM.
 
 ### Inferential  (Build model.1)
 
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
 #### Predict at target point
+```{r}
+mydat <- data.frame(ARM = 88)
+```
+```{r}
+predict(model.1, mydat, interval = "prediction")
+```
+Using the model, we predict that at ARM = 88, sim = 0.0706 ± 2.427.
 
 
 #### scatterplot with model fit
-  
+```{R}
+ scatterplot.1 + geom_point() + geom_lm()
+```
 
 ## Model 2 SIM~GRIP
 
