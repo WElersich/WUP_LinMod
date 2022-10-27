@@ -34,9 +34,20 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ## Model 1 SIM~ARMS
 
 ### scatterplot
+```{r}
+scatterplot1 <- ggplot(data,aes(y=SIMS, x=ARM))
+scatterplot1 + geom_point() + geom_lm()
+
+```
+Looking at this scatterplot, it is clear that SIMS positively correlates with ARM.
+
 
 ### Numerical results
 
+```{r}
+cor(SIMS~ARM,data=data)
+```
+This numerically confirms that SIMS positively correlates with ARM.
 
 ### Inferential  (Build model.1)
 
