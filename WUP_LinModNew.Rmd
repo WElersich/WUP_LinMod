@@ -172,6 +172,11 @@ Based off the anova tests, we can rank the models in order of accuracy:
 
 From the values we have collected, we can further prove this ranking:
 
-model.3: residual standard error = 1.144, adjusted R-squared value = 0.5358, correlation = 0.7326545, and margin of error = 2.282.  
+model.3: residual standard error = 1.144, adjusted R-squared value = 0.5358, correlation = 0.7326545, and a prediction margin of error of ± 2.282.  
 
-model.2
+model.2: residual standard error = 1.226, adjusted R-squared value of 0.467, correlation = 0.6860073, and prediction  margin of error of ± 2.427.  
+
+model.1: residual standard error =1.295, adjusted R-squared value of 0.4053, correlation = 0.6398458, and a prediction margin of error of ± 2.572.  
+
+model.3 has the highest correlation and adjusted R-sqaured values, and the lowest errors.
+
